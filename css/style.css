@@ -142,8 +142,8 @@ h1 {
     z-index: 5;
     position: fixed;
     right: 50px;
-    top: 50%;
-    width: 50px;
+    bottom: 10%;
+    width: 150px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -164,6 +164,7 @@ h1 {
     line-height: 50px;
     background-color: rgba(0, 0, 0, 0.7);
     margin-bottom: 1px;
+    display: inline-block;
 }
 
 #slideNav a {
