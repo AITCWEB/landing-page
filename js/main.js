@@ -1,27 +1,32 @@
 (function ($) {
+
+	// $(".wrapper h1").on('click mouseover', function () {
+	// 	$(".wrapper").toggleClass("hover");
+	// });
+
 	// Init ScrollMagic
-	var controller = new ScrollMagic.Controller();
+	// var controller = new ScrollMagic.Controller();
 
 	// pin the intro
-	var pinIntroScene = new ScrollMagic.Scene({
-			triggerElement: '.bcg',
-			triggerHook: 0,
-			duration: '30%'
-		})
-		.setPin('.bcg', {
-			pushFollowers: false
-		})
-		.addTo(controller);
+	// var pinIntroScene = new ScrollMagic.Scene({
+	// 		triggerElement: '.bcg',
+	// 		triggerHook: 0,
+	// 		duration: '30%'
+	// 	})
+	// 	.setPin('.bcg', {
+	// 		pushFollowers: false
+	// 	})
+	// 	.addTo(controller);
 
-	// pin again
-	var pinIntroScene2 = new ScrollMagic.Scene({
-			triggerElement: '#main',
-			triggerHook: 0.4
-		})
-		.setPin('.bcg', {
-			pushFollowers: false
-		})
-		.addTo(controller);
+	// // pin again
+	// var pinIntroScene2 = new ScrollMagic.Scene({
+	// 		triggerElement: '#main',
+	// 		triggerHook: 0.4
+	// 	})
+	// 	.setPin('.bcg', {
+	// 		pushFollowers: false
+	// 	})
+	// 	.addTo(controller);
 
 
 
@@ -50,9 +55,6 @@
 			transformPerspective: 900,
 			transformOrigin: "center"
 		});
-
-		// Update text on the page with the current mouse position
-		$(".bottom strong").text(event.pageX + ", " + event.pageY);
 	});
 
 
@@ -82,59 +84,29 @@
 
 		if (slideIn.length !== 0) {
 
-			// go to the next slide timeline
 			tl
-				// move the new slide (the one about to enter viewport) out of the viewport and add class active
 				.set(slideIn, {
 					x: '100%',
 					autoAlpha: 1,
 					className: '+=active'
 				})
-				// remove class active from the currently active slide (slideOut)
 				.set(slideOut, {
 					className: '-=active',
 				})
-				// .to(slideOut, 0.3, {
-				// 	x: '-=15px',
-				// 	autoAlpha: 0,
-				// 	ease: Power3.easeInOut
-				// }, 0)
-				// animate active slide up (out of the viewport)
 				.to(slideOut, 0.5, {
 					x: '-100%',
 					ease: Power3.easeInOut
 				}, .2)
-				// animate new slide up (from out of the viewport)
 				.to(slideIn, 0.5, {
 					x: '-=100%',
 					ease: Power3.easeInOut
 				}, .2)
-			// .fromTo([slideIn, slideOut], 2, {
-			// 	x: -1
-			// }, {
-			// 	x: "-100px",
-			// 	ease: Linear.easeNone,
-			// 	force3D: true
-			// })
-			// .fromTo(slideIn, 0.3, {
-			// 	x: '+=20px',
-			// 	autoAlpha: 0
-			// }, {
-			// 	autoAlpha: 1,
-			// 	x: 0,
-			// 	ease: Power1.easeInOut
-			// }, 0.3);
 
 		}
-
-		// Fade out arrow up and fade in arrow down 
-
-		// Fade in arrow down
 		TweenLite.set($slideNavPrev, {
 			autoAlpha: 1
 		});
 
-		// Fade out arrow up on last slide
 		if (index === size) {
 			TweenLite.to($slideNavNext, 0.3, {
 				autoAlpha: 0.2,
@@ -164,26 +136,20 @@
 
 		if (slideIn.length !== 0) {
 
-			// go to the previous slide timeline
 			tl
-				// move the new slide (the one about to enter viewport) out of the viewport (to the top)
 				.set(slideIn, {
 					x: '-100%',
 					autoAlpha: 1,
 					className: '+=active'
 				})
-				// remove class active from the currently active slide (slideOut)
 				.set(slideOut, {
 					className: '-=active'
 				})
-				// animate H1 and p of the active slide down and fade them out
 
-				// animate active slide down (out of the viewport)
 				.to(slideOut, 0.5, {
 					x: '100%',
 					ease: Power3.easeInOut
 				}, 0)
-				// animate new slide down (from out of the viewport)
 				.to(slideIn, 0.5, {
 					x: '+=100%',
 					ease: Power3.easeInOut
@@ -191,14 +157,11 @@
 
 		}
 
-		// Fade out arrow down and fade in arrow up 
 
-		// Fade in arrow up
 		TweenLite.set($slideNavNext, {
 			autoAlpha: 1
 		});
 
-		// Fade out arrow down on first slide
 		if (index === 1) {
 			TweenLite.to($slideNavPrev, 0.3, {
 				autoAlpha: 0.2,

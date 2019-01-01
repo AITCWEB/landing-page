@@ -1,28 +1,22 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
-
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 audio,
@@ -31,26 +25,25 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
-
 
 /* ==========================================================================
    Author's custom styles
@@ -58,194 +51,264 @@ textarea {
 *,
 *::after,
 *::before {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font: 16px/1.5 'Open Sans', Helvetica, Helvetica Neue, Arial, sans-serif;
-    background-color: #ffffff;
-    color: #222222;
+  font: 16px/1.5 "Open Sans", Helvetica, Helvetica Neue, Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 /* Our CSS will go here */
 .logo {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    z-index: 6;
-    opacity: 0.3;
-}
-
-
-h1 {
-    color: #ffffff;
-    font-weight: 300;
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    margin: 0 0 20px 0;
-    font-size: 60px;
-    text-align: center;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 6;
+  opacity: 0.3;
 }
 
 .hero {
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
 }
 
 .top {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .homeSlide {
-    position: absolute;
-    width: 120%;
-    height: 120%;
-    transform: scale(1.2);
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  transform: scale(1.2);
+  z-index: 0;
 }
 
 .homeSlide.slide01 {
-    background: url(../img/1.jpg) no-repeat center;
-    background-size: cover;
+  background: url(../img/1.jpeg) no-repeat;
+  background-size: cover;
 }
 
 .homeSlide.slide02 {
-    background: url(../img/2.jpg) no-repeat center;
-    background-size: cover;
+  background: url(../img/2.jpeg) no-repeat center;
+  background-size: cover;
 }
 
 .homeSlide.slide03 {
-    background: url(../img/3.jpg) no-repeat center;
-    background-size: cover;
+  background: url(../img/3.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.homeSlide.slide04 {
+  background: url(../img/4.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.homeSlide.slide05 {
+  background: url(../img/5.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.homeSlide.slide06 {
+  background: url(../img/6.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.homeSlide.slide07 {
+  background: url(../img/7.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  pointer-events: none;
+  transition: all 0.5s ease-in;
+}
+.wrapper div {
+  margin: 0 30px;
+}
+.wrapper .summ {
+  margin: 60px;
+}
+.wrapper h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.wrapper p {
+  margin-right: 120px;
+  margin-left: 180px;
+  opacity: 0;
+  line-height: 1.6;
+  visibility: hidden;
+  transform: translateY(50%) skewY(2deg) skewX(15deg) scale(1.1);
+  transition: all 0.5s ease-in;
+}
+
+.wrapper h1::before {
+  content: "+";
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  margin-right: 20px;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+  font-size: 20px;
+  pointer-events: all;
+}
+
+.wrapper h1:hover::before {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  content: "-";
+}
+
+.wrapper h1:hover ~ p {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.wrapper:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0, #000);
 }
 
 #slideNav {
-    z-index: 5;
-    position: fixed;
-    right: 50px;
-    bottom: 10%;
-    width: 150px;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  padding: 0 30px;
 }
-
 #slideNav ul {
-    list-style: none;
-    color: #ffffff;
-    font-size: 13px;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  color: #ffffff;
+  font-size: 13px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 #slideNav li {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    background-color: rgba(0, 0, 0, 0.7);
-    margin-bottom: 1px;
-    display: inline-block;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+  padding: 0 10px;
 }
 
 #slideNav a {
-    display: block;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-    color: #ffffff;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+#slideNav a span.next {
+  margin-right: 10px;
 }
 
+#slideNav a span.prev {
+  margin-left: 10px;
+}
 
 .main-container {
-    height: 2000px;
-    z-index: 10;
-    position: relative;
-    background-color: #FFF;
-
+  height: 2000px;
+  z-index: 10;
+  position: relative;
+  background-color: #000;
 }
-
-
-
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {}
+@media only screen and (min-width: 35em) {
+}
 
 @media print,
-(-o-min-device-pixel-ratio: 5/4),
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 120dpi) {}
+  (-o-min-device-pixel-ratio: 5/4),
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 120dpi) {
+}
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 
 .hidden {
-    display: none !important;
-    visibility: hidden;
+  display: none !important;
+  visibility: hidden;
 }
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 .clearfix {
-    *zoom: 1;
+  *zoom: 1;
 }
 
 /* ==========================================================================
@@ -253,62 +316,61 @@ h1 {
    ========================================================================== */
 
 @media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
 
-    a[href]:after {
-        content: " ("attr(href) ")";
-    }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
 
-    abbr[title]:after {
-        content: " ("attr(title) ")";
-    }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+  thead {
+    display: table-header-group;
+  }
 
-    thead {
-        display: table-header-group;
-    }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+  img {
+    max-width: 100% !important;
+  }
 
-    img {
-        max-width: 100% !important;
-    }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
